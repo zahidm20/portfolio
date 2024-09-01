@@ -12,27 +12,32 @@ import { GithubStats } from '@/components/common/GithubStats'
 const mockProjects = [
   {
     id: 1,
-    type: 'web',
-    name: 'Web Project 1',
-    description: 'This is a description for Web Project 1.',
+    type: 'mobile',
+    name: 'TraverApp (FullStack Mobile)',
+    description:
+      'I create a travelApp like traveloka, tiketcom, etc. for online ticket bookings such as flight tickets and hotel tickets.',
+    
   },
   {
     id: 2,
     type: 'mobile',
     name: 'Mobile Project 1',
     description: 'This is a description for Mobile Project 1.',
+    
   },
   {
     id: 3,
     type: 'api',
     name: 'API Project 1',
     description: 'This is a description for API Project 1.',
+    
   },
   {
     id: 4,
     type: 'web',
     name: 'Web Project 2',
     description: 'This is a description for Web Project 2.',
+    techStack: 'Frontend: React.js, Backend: Node.js',
   },
 ]
 
@@ -118,7 +123,7 @@ export default function Project() {
           </button>
         </div>
       </div>
-      <div className="mb-2 mt-6 flex w-full flex-wrap justify-center gap-4 sm:mb-4 md:mb-5 lg:mb-6 lg:gap-6">
+      <div className="mx-auto mb-2 mt-6 grid w-full max-w-screen-lg grid-cols-1 gap-8 sm:mb-4 md:mb-5 lg:mb-6 lg:grid-cols-2">
         {!isLoading &&
           !error &&
           data.data
@@ -134,7 +139,16 @@ export default function Project() {
               if (filter === 'api') return item.type === 'api'
               return item.type === filter
             })
-            .map((item, index) => <ProjectCard {...item} key={index} />)}
+            .map((item, index) => (
+              <div
+                key={index}
+                className="flex h-full items-center justify-center rounded-lg bg-[#898383] p-6 shadow-lg"
+              >
+                <div className="flex w-full items-center justify-center text-center">
+                  <ProjectCard {...item} />
+                </div>
+              </div>
+            ))}
         {isLoading && (
           <div className="flex w-3/4 flex-row items-center justify-center">
             <Skeleton
