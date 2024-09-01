@@ -6,8 +6,8 @@ import { ThemeProvider } from '@/provider/themesProvider'
 import Tawk from '@/components/common/Tawk'
 
 export const metadata: Metadata = {
-  title: 'Radifa | Portfolio',
-  description: 'Radifa | Portfolio',
+  title: 'zaheid | Portfolio',
+  description: 'zaheid | Portfolio',
 }
 
 export default function RootLayout({
