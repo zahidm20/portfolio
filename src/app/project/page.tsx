@@ -16,28 +16,25 @@ const mockProjects = [
     name: 'TraverApp (FullStack Mobile)',
     description:
       'I create a travelApp like traveloka, tiketcom, etc. for online ticket bookings such as flight tickets and hotel tickets.',
-    
   },
   {
     id: 2,
     type: 'mobile',
     name: 'Mobile Project 1',
     description: 'This is a description for Mobile Project 1.',
-    
   },
   {
     id: 3,
     type: 'api',
     name: 'API Project 1',
     description: 'This is a description for API Project 1.',
-    
   },
   {
     id: 4,
     type: 'web',
     name: 'Web Project 2',
-    description: 'This is a description for Web Project 2.',
-    techStack: 'Frontend: React.js, Backend: Node.js',
+    description:
+      'I built a mobile application called Rihlatul which provides Umrah and Hajj guides.',
   },
 ]
 
