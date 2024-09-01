@@ -8,7 +8,6 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { GithubStats } from '@/components/common/GithubStats'
 
-// Mock data untuk menggantikan data dari API
 const mockProjects = [
   {
     id: 1,
@@ -16,6 +15,7 @@ const mockProjects = [
     name: 'TraverApp (FullStack Mobile)',
     description:
       'I create a travelApp like traveloka, tiketcom, etc. for online ticket bookings such as flight tickets and hotel tickets.',
+    techstack: `Tech Stack:\nFrontend: http, getx, shared preferences, etc package.\nbackend:  nestjs with typescript, mysql, typeorm, `,
   },
   {
     id: 2,
